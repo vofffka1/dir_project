@@ -105,7 +105,7 @@ MyFrame::MyFrame(const wxString& title) :
 	wxBoxSizer* bSizer4 = new wxBoxSizer( wxVERTICAL );
 	wxBoxSizer* bSizer8 = new wxBoxSizer( wxHORIZONTAL );
 
-	auto m_staticText1 = new wxStaticText( this, wxID_ANY, wxT("Путь к исходной директории"), wxDefaultPosition, wxDefaultSize, 0 );
+	auto m_staticText1 = new wxStaticText( this, wxID_ANY, wxT("ГЏГіГІГј ГЄ ГЁГ±ГµГ®Г¤Г­Г®Г© Г¤ГЁГ°ГҐГЄГІГ®Г°ГЁГЁ"), wxDefaultPosition, wxDefaultSize, 0 );
 	m_staticText1->Wrap( -1 );
 	bSizer8->Add( m_staticText1, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5 );
 
@@ -116,14 +116,14 @@ MyFrame::MyFrame(const wxString& title) :
 
 	wxBoxSizer* bSizer91 = new wxBoxSizer( wxHORIZONTAL );
 
-	auto m_staticText11 = new wxStaticText( this, wxID_ANY, wxT("Установите пороговое значение"), wxDefaultPosition, wxDefaultSize, 0 );
+	auto m_staticText11 = new wxStaticText( this, wxID_ANY, wxT("Г“Г±ГІГ Г­Г®ГўГЁГІГҐ ГЇГ®Г°Г®ГЈГ®ГўГ®ГҐ Г§Г­Г Г·ГҐГ­ГЁГҐ"), wxDefaultPosition, wxDefaultSize, 0 );
 	m_staticText11->Wrap( -1 );
 	bSizer91->Add( m_staticText11, 0, wxALL|wxALIGN_CENTER_VERTICAL, 5 );
 
 	m_LimitValue = new wxSpinCtrl( this, wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxSP_ARROW_KEYS, 50, 100, 90 );
 	bSizer91->Add( m_LimitValue, 0, wxALL|wxALIGN_CENTER_VERTICAL, 5 );
 
-	wxString m_ModeChoices[] = { wxT("по количеству"),wxT("по объему") };
+	wxString m_ModeChoices[] = { wxT("ГЇГ® ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГі"),wxT("ГЇГ® Г®ГЎГєГҐГ¬Гі") };
 	int m_ModeNChoices = sizeof( m_ModeChoices ) / sizeof( wxString );
 	m_Mode = new wxChoice( this, wxID_ANY, wxDefaultPosition, wxDefaultSize, m_ModeNChoices, m_ModeChoices, 0 );
 	m_Mode->SetSelection( 0 );
@@ -133,13 +133,13 @@ MyFrame::MyFrame(const wxString& title) :
 
 	wxBoxSizer* m_prefBox = new wxBoxSizer( wxHORIZONTAL );
 
-	m_Start = new wxButton( this, wxID_ANY, wxT("Начать"), wxDefaultPosition, wxDefaultSize, 0 );
+	m_Start = new wxButton( this, wxID_ANY, wxT("ГЌГ Г·Г ГІГј"), wxDefaultPosition, wxDefaultSize, 0 );
 	m_prefBox->Add( m_Start, 1, wxALL, 5 );
 
-	m_ShowEmpty = new wxButton( this, wxID_ANY, wxT("Отобразить пустые"), wxDefaultPosition, wxDefaultSize, 0 );
+	m_ShowEmpty = new wxButton( this, wxID_ANY, wxT("ГЋГІГ®ГЎГ°Г Г§ГЁГІГј ГЇГіГ±ГІГ»ГҐ"), wxDefaultPosition, wxDefaultSize, 0 );
 	m_prefBox->Add( m_ShowEmpty, 1, wxALL, 5 );
 
-	m_Save = new wxButton( this, wxID_ANY, wxT("Сохранить"), wxDefaultPosition, wxDefaultSize, 0 );
+	m_Save = new wxButton( this, wxID_ANY, wxT("Г‘Г®ГµГ°Г Г­ГЁГІГј"), wxDefaultPosition, wxDefaultSize, 0 );
 	m_prefBox->Add( m_Save, 1, wxALL, 5 );
 
 
@@ -151,19 +151,19 @@ MyFrame::MyFrame(const wxString& title) :
 
 	wxBoxSizer* bSizer9 = new wxBoxSizer( wxVERTICAL );
 
-	auto m_staticText4 = new wxStaticText( this, wxID_ANY, wxT("Совпадающие директории"), wxDefaultPosition, wxDefaultSize, 0 );
+	auto m_staticText4 = new wxStaticText( this, wxID_ANY, wxT("Г‘Г®ГўГЇГ Г¤Г ГѕГ№ГЁГҐ Г¤ГЁГ°ГҐГЄГІГ®Г°ГЁГЁ"), wxDefaultPosition, wxDefaultSize, 0 );
 	m_staticText4->Wrap( -1 );
 	bSizer9->Add( m_staticText4, 0, wxALL|wxALIGN_CENTER_HORIZONTAL, 5 );
 
 	m_GroupDirs = new wxListBox(this, wxID_PRINT,wxDefaultPosition,wxDefaultSize, wxArrayString(), wxLB_SINGLE);
 	bSizer9->Add( m_GroupDirs, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxEXPAND, 5 );
-	m_Info = new wxButton( this, wxID_INFO, wxT("Отобразить"), wxDefaultPosition, wxDefaultSize, 0 );
+	m_Info = new wxButton( this, wxID_INFO, wxT("ГЋГІГ®ГЎГ°Г Г§ГЁГІГј"), wxDefaultPosition, wxDefaultSize, 0 );
 	bSizer9->Add( m_Info, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxEXPAND, 5 );
 	m_outSizer->Add( bSizer9, 1, wxEXPAND, 5 );
 
 	wxBoxSizer* bSizer10 = new wxBoxSizer( wxVERTICAL );
 
-	auto m_staticText5 = new wxStaticText( this, wxID_ANY,wxT("Уникальные директории"), wxDefaultPosition, wxDefaultSize, 0 );
+	auto m_staticText5 = new wxStaticText( this, wxID_ANY,wxT("Г“Г­ГЁГЄГ Г«ГјГ­Г»ГҐ Г¤ГЁГ°ГҐГЄГІГ®Г°ГЁГЁ"), wxDefaultPosition, wxDefaultSize, 0 );
 	m_staticText5->Wrap( -1 );
 	bSizer10->Add( m_staticText5, 0, wxALL|wxALIGN_CENTER_HORIZONTAL, 5 );
 
@@ -175,10 +175,6 @@ MyFrame::MyFrame(const wxString& title) :
 	this->SetSizer( m_mainSizer );
 	this->Layout();
 	this->Centre( wxBOTH );
-	//начиная с wxWidgets 2.9.0 
-	//если компилятор поддерживает C++11
-	//очень удобно вместо макросов
-	//использовать лямбда-выражения в качестве обработчиков
 	Binds();
 	
 	}
@@ -191,61 +187,61 @@ void MyFrame::Binds()
 	{
 	m_dirPicker1->Bind(wxEVT_DIRPICKER_CHANGED,[&](wxFileDirPickerEvent &evt)
 		{
-		//если изменилась директория очищаем
-		//устанавливаем стандартное пороговое значение
+		//ГҐГ±Г«ГЁ ГЁГ§Г¬ГҐГ­ГЁГ«Г Г±Гј Г¤ГЁГ°ГҐГЄГІГ®Г°ГЁГї Г®Г·ГЁГ№Г ГҐГ¬
+		//ГіГ±ГІГ Г­Г ГўГ«ГЁГўГ ГҐГ¬ Г±ГІГ Г­Г¤Г Г°ГІГ­Г®ГҐ ГЇГ®Г°Г®ГЈГ®ГўГ®ГҐ Г§Г­Г Г·ГҐГ­ГЁГҐ
 		Clear();
 		m_LimitValue->SetValue(90);
 		},wxID_FIRST);
 
 	m_Start->Bind(wxEVT_BUTTON, [&](wxCommandEvent&)
 		{
-		//основной обработчкик
+		//Г®Г±Г­Г®ГўГ­Г®Г© Г®ГЎГ°Г ГЎГ®ГІГ·ГЄГЁГЄ
 		Clear();
 		auto root = m_dirPicker1->GetPath();
-		//получаем карту директорий-файлов
+		//ГЇГ®Г«ГіГ·Г ГҐГ¬ ГЄГ Г°ГІГі Г¤ГЁГ°ГҐГЄГІГ®Г°ГЁГ©-ГґГ Г©Г«Г®Гў
 		Fill(root);
-		//удаляем корень
+		//ГіГ¤Г Г«ГїГҐГ¬ ГЄГ®Г°ГҐГ­Гј
 		m_dirs.erase(root);
         Groups2 data;
 		std::unordered_set<wxString> dub;
-		//перебор всех директорий
+		//ГЇГҐГ°ГҐГЎГ®Г° ГўГ±ГҐГµ Г¤ГЁГ°ГҐГЄГІГ®Г°ГЁГ©
 		for(auto it = m_dirs.cbegin();it!=m_dirs.cend();it++)
 			{
-			//если директория пустая - продолжаем
+			//ГҐГ±Г«ГЁ Г¤ГЁГ°ГҐГЄГІГ®Г°ГЁГї ГЇГіГ±ГІГ Гї - ГЇГ°Г®Г¤Г®Г«Г¦Г ГҐГ¬
 			if(it->second.empty())
 				{
 				m_emptyDirs.insert(it->first);
 				continue;
 				}
-			//сравниваем со всеми последующими
+			//Г±Г°Г ГўГ­ГЁГўГ ГҐГ¬ Г±Г® ГўГ±ГҐГ¬ГЁ ГЇГ®Г±Г«ГҐГ¤ГіГѕГ№ГЁГ¬ГЁ
 			for(auto j = std::next(it);j!=m_dirs.cend();j++)
 				{
 				bool is_eq;
 				std::size_t percent;
-				//сравниваем в зависимости от режима
+				//Г±Г°Г ГўГ­ГЁГўГ ГҐГ¬ Гў Г§Г ГўГЁГ±ГЁГ¬Г®Г±ГІГЁ Г®ГІ Г°ГҐГ¦ГЁГ¬Г 
 				if(m_Mode->GetSelection()==0) 
 					std::tie(is_eq,percent)  = CountCompare(it->second,j->second);
 				else
 					std::tie(is_eq,percent) = VolumeCompare(it->second,j->second);
 				if(is_eq)
 					{
-					//если директории эквивалентны
-					//то добавляем пути в набор дубликатов
-					//и сохраняем процент соответствия
+					//ГҐГ±Г«ГЁ Г¤ГЁГ°ГҐГЄГІГ®Г°ГЁГЁ ГЅГЄГўГЁГўГ Г«ГҐГ­ГІГ­Г»
+					//ГІГ® Г¤Г®ГЎГ ГўГ«ГїГҐГ¬ ГЇГіГІГЁ Гў Г­Г ГЎГ®Г° Г¤ГіГЎГ«ГЁГЄГ ГІГ®Гў
+					//ГЁ Г±Г®ГµГ°Г Г­ГїГҐГ¬ ГЇГ°Г®Г¶ГҐГ­ГІ Г±Г®Г®ГІГўГҐГІГ±ГІГўГЁГї
 					dub.insert(it->first);
 					dub.insert(j->first);
 					data[it->first][j->first] = percent;
 					}
 				}
 			}
-		//выводим уникальные
+		//ГўГ»ГўГ®Г¤ГЁГ¬ ГіГ­ГЁГЄГ Г«ГјГ­Г»ГҐ
 		
 		for(const auto &el : m_dirs)
 			if(dub.find(el.first)==dub.end() 
 				&& m_emptyDirs.find(el.first)==m_emptyDirs.end())
 			    m_DiffDirs->AppendText(el.first+"\n");
 
-		//компоновка
+		//ГЄГ®Г¬ГЇГ®Г­Г®ГўГЄГ 
 		std::unordered_map<wxString,std::vector<Triple>> group;
 		for(auto it = data.cbegin();it!=data.cend();it++)
 			{
@@ -269,7 +265,7 @@ void MyFrame::Binds()
 					j++;
 				}
 			}
-		//создаем список групп
+		//Г±Г®Г§Г¤Г ГҐГ¬ Г±ГЇГЁГ±Г®ГЄ ГЈГ°ГіГЇГЇ
 		if(!group.empty())
 		{
 		wxArrayString strings;
@@ -284,7 +280,7 @@ void MyFrame::Binds()
 
 	m_Save->Bind(wxEVT_BUTTON, [&](wxCommandEvent&)
 		{
-		//сохраняем в файл
+		//Г±Г®ГµГ°Г Г­ГїГҐГ¬ Гў ГґГ Г©Г«
 		wxFileOutputStream outStream("log.txt");
 		wxTextOutputStream out(outStream);
 		for(const auto &el : m_dirs)
@@ -298,13 +294,13 @@ void MyFrame::Binds()
 
 	m_ShowEmpty->Bind(wxEVT_BUTTON, [&](wxCommandEvent&)
 		{
-		    //отображаем пустые
+		    //Г®ГІГ®ГЎГ°Г Г¦Г ГҐГ¬ ГЇГіГ±ГІГ»ГҐ
 			EmptyDialog(m_emptyDirs).Show();
 		});
 
 	m_Info->Bind(wxEVT_BUTTON, [&](wxCommandEvent&)
 		{
-		//отображаем таблицу   
+		//Г®ГІГ®ГЎГ°Г Г¦Г ГҐГ¬ ГІГ ГЎГ«ГЁГ¶Гі   
 		GridDialog(
 			m_Group[m_GroupDirs->GetStringSelection()]).Show();
 
@@ -320,7 +316,7 @@ void MyFrame::Clear()
 	m_Group.clear();
 	m_emptyDirs.clear();
 	}
-//заполнение карты , ключ - директория, значение - вектор файлов
+//Г§Г ГЇГ®Г«Г­ГҐГ­ГЁГҐ ГЄГ Г°ГІГ» , ГЄГ«ГѕГ· - Г¤ГЁГ°ГҐГЄГІГ®Г°ГЁГї, Г§Г­Г Г·ГҐГ­ГЁГҐ - ГўГҐГЄГІГ®Г° ГґГ Г©Г«Г®Гў
 void MyFrame::Fill(const wxString &path)
 	{
 	wxDir dir(path);
@@ -342,7 +338,7 @@ void MyFrame::Fill(const wxString &path)
 		Fill(el);
 		
 	}
-//количественное сравнение
+//ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГҐГ­Г­Г®ГҐ Г±Г°Г ГўГ­ГҐГ­ГЁГҐ
 std::pair<bool,std::size_t> MyFrame::CountCompare(
 	const std::vector<wxString> &a,
 	const std::vector<wxString> &b)
@@ -350,12 +346,12 @@ std::pair<bool,std::size_t> MyFrame::CountCompare(
 	std::size_t diff=0,eq = 0,
 		maxsize = std::max(a.size(),b.size());
 	double Limit = m_LimitValue->GetValue();
-	//определяем максимально допустимое количество различных файлов
+	//Г®ГЇГ°ГҐГ¤ГҐГ«ГїГҐГ¬ Г¬Г ГЄГ±ГЁГ¬Г Г«ГјГ­Г® Г¤Г®ГЇГіГ±ГІГЁГ¬Г®ГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г°Г Г§Г«ГЁГ·Г­Г»Гµ ГґГ Г©Г«Г®Гў
 	std::size_t MaxDiff = maxsize-std::ceil(maxsize*Limit/100);
-	//если количество файлов в папках отличается на большее - возврат
+	//ГҐГ±Г«ГЁ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® ГґГ Г©Г«Г®Гў Гў ГЇГ ГЇГЄГ Гµ Г®ГІГ«ГЁГ·Г ГҐГІГ±Гї Г­Г  ГЎГ®Г«ГјГёГҐГҐ - ГўГ®Г§ГўГ°Г ГІ
 	if(maxsize-std::min(a.size(),b.size())>MaxDiff)
 		return std::make_pair(false,0);
-	//нужно для особого учета дублей
+	//Г­ГіГ¦Г­Г® Г¤Г«Гї Г®Г±Г®ГЎГ®ГЈГ® ГіГ·ГҐГІГ  Г¤ГіГЎГ«ГҐГ©
 	std::unordered_set<wxString> set;
 	for(const auto &f1 : a)
 		{
@@ -364,10 +360,10 @@ std::pair<bool,std::size_t> MyFrame::CountCompare(
 			{
 			wxFileInputStream file(f1);
 			wxFileInputStream temp(f2);
-			//если размер совпадает
-			//и ранее этот файл не был найден
-			//и он идентичен проверяемому
-			//добавляем в помеченные и отмечаем соответствие
+			//ГҐГ±Г«ГЁ Г°Г Г§Г¬ГҐГ° Г±Г®ГўГЇГ Г¤Г ГҐГІ
+			//ГЁ Г°Г Г­ГҐГҐ ГЅГІГ®ГІ ГґГ Г©Г« Г­ГҐ ГЎГ»Г« Г­Г Г©Г¤ГҐГ­
+			//ГЁ Г®Г­ ГЁГ¤ГҐГ­ГІГЁГ·ГҐГ­ ГЇГ°Г®ГўГҐГ°ГїГҐГ¬Г®Г¬Гі
+			//Г¤Г®ГЎГ ГўГ«ГїГҐГ¬ Гў ГЇГ®Г¬ГҐГ·ГҐГ­Г­Г»ГҐ ГЁ Г®ГІГ¬ГҐГ·Г ГҐГ¬ Г±Г®Г®ГІГўГҐГІГ±ГІГўГЁГҐ
 			if(file.GetSize()==temp.GetSize() &&
 				set.find(f2)== set.end() &&
 				is_identity(file,temp)) 
@@ -392,8 +388,8 @@ std::pair<bool,std::size_t> MyFrame::CountCompare(
 	else
 		return std::make_pair(false,0);
 	}
-//объемное сравнение
-//принцип такой-же
+//Г®ГЎГєГҐГ¬Г­Г®ГҐ Г±Г°Г ГўГ­ГҐГ­ГЁГҐ
+//ГЇГ°ГЁГ­Г¶ГЁГЇ ГІГ ГЄГ®Г©-Г¦ГҐ
 std::pair<bool,std::size_t> MyFrame::VolumeCompare(
 	const std::vector<wxString> &a,
 	const std::vector<wxString> &b)
